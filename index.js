@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import userRoute from "./routes/userRoute.js"; // add .js if using ES modules
+import userRoute from "./routes/userRoute.js"; 
 import claimRoute from "./routes/claimRoute.js";
 
 dotenv.config();
@@ -18,7 +18,7 @@ mongoose
   })
   .catch((err) => console.log(err));
 
-// ✅ Correct way to mount the router
+
 app.use("/api/users", userRoute);
 app.use("/api/claim", claimRoute);
 
